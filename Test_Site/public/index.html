@@ -9,12 +9,4 @@
   <input type="submit" name="submit" value="Submit" />
 </form>
 </body>
-<script>
-  function POST(){
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://crewco-usd290flexportal-34az85a1a9b.ws-us71.gitpod.io/form", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({"fname": "xavier"}));
-  }
-</script>
 </html>
