@@ -5,10 +5,12 @@
 </head>
 <body>
 <form name="pyform" method="POST" action="/cgi-bin/student_form">
-  <p>UserNam: <input type="text" name="fname"/></p>
-  <p>StaffID: <input type="text" name="staff"/></p>
-  <p>Stud ID: <input type="test" name="student"></p>
-  <input type="submit" name="submit" value="Submit" />
+  <p><input type="search" name="fname" placeholder="username" size="30"></p>
+  <p><input type="search" name="staff" placeholder="StaffID" size="30"></p>
+  <p><input type="search" name="stuid" placeholder="StudentID" size="30"></p>
+  <p><input type="submit" name="submit" value="Submit" autofocus></p>
 </form>
 </body>
+<script src="./scripts/main.js"></script>
+<script>Login()</script>
 </html>
