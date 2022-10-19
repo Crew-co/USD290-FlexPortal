@@ -27,7 +27,6 @@ def GETSTUDENT(stu):
                     NL_EMPTY_STRINGS.remove(' ')
                     print("Person Not Found")
         for LST in NL_EMPTY_STRINGS:
-            #print(LST)
             print("<ul>")
             print(f"<li>{LST}</li>")
             print("</ul>")
