@@ -74,6 +74,9 @@ def GETSTUDENT_EVENT(stu):
     except TypeError as e:
         print("No Name was Given")
         print("<a href=/>Back</a>")
+    except IndexError as e:
+        print("User Events Not found")
+        print("<a href=/>Back</a>")
 def Get_Events_STAFF(SD):
     # staffID = input("ID: ")
     staffID = SD
