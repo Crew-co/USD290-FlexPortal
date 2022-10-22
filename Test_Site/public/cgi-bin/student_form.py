@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-print("Content-Type: text/html")
-print()
 
 import cgi, cgitb
 import requests as rq
@@ -8,6 +6,9 @@ import os
 import warnings as w
 import json
 import re
+
+print("Content-Type: text/html")
+print()
 
 cgitb.enable()  # for debugging
 form = cgi.FieldStorage()
