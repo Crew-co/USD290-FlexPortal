@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+AuthType Basic
+AuthName "AdminPage"
+AuthUserFile /workspace/USD290-FlexPortal/Test_Site/.htpasswds/.htpasswd
+Require valid-user
+
+<Files index.html>
+Order Allow,Deny
+Allow from all
+</Files>

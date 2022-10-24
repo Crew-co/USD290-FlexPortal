@@ -1,3 +1,15 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.py [NC,L]
+
+IndexIgnore *
+
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+AuthType Basic
+AuthName "Administrator"
+AuthUserFile /workspace/USD290-FlexPortal/Test_Site/.htpasswds/.htpasswd
+Require valid-user
