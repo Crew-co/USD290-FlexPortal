@@ -37,7 +37,6 @@ def GETSTUDENT(stu):
         print("<a href=/>Back</a>")
     except TypeError as e:
         print("No Name was Given")
-        print("<a href=/>Back</a>")
 def GETSTUDENT_EVENT(stu):
     if staffID == "ABC":
         try:
@@ -70,13 +69,10 @@ def GETSTUDENT_EVENT(stu):
                 print( "<p>"+"|"+entry['id']+" "+entry['title']+" "+entry['staffid']+" "+entry['start']+" "+entry['end']+"</p>")
             print("<div>|========================================================================================================|</div>")
         #print("</ul>")
-            print("<a href=/>Back</a>")
         except TypeError as e:
             print("No Name was Given")
-            print("<a href=/>Back</a>")
         except IndexError as e:
             print("User Events Not found")
-            print("<a href=/>Back</a>")
     else:
         print("FAIL")
 def Get_Events_STAFF(SD):
