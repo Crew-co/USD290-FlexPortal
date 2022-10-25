@@ -21,7 +21,7 @@ function GETSTAFF(str) {
       xmlhttp.onload = function() {
         document.getElementById("txtHint").innerHTML = this.responseText;
       }
-    xmlhttp.open("GET", "/cgi-bin/student_form?staff=" + str);
+    xmlhttp.open("GET", "../cgi-bin/student_form?staff=" + str);
     xmlhttp.send();
     }
   }
