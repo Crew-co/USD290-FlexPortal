@@ -37,22 +37,27 @@ def GM(IN1,IN2,IN3,IN4,IN5,IN6):
         A = LST.pop(0)
         B = LST.pop(0)
         JN1 = ''.join("pt."+IN1+ADDON)
+        #print(JN1)
         JN2 = ''.join("pt."+IN2+ADDON)
+        #print(JN2)
         #print(JN1+" "+" "+JN2)
         op1 = "*"
         op2 = "+"
         T1 = eval(JN1)
         T2 = eval(JN2)
-        SUM1 = T1 * IN4
-        SUM2 = T2 * IN5
+        SUM1 = float(T1) * IN4
+        SUM2 = float(T2) * IN5
         TSUM = SUM1 + SUM2
         print(round(TSUM,2))
     elif LNST == 3:
         A = LST.pop(0)
         B = LST.pop(0)
         JN1 = ''.join("pt."+IN1+ADDON)
+        #print(JN1)
         JN2 = ''.join("pt."+IN2+ADDON)
+        #print(JN2)
         JN3 = ''.join("pt."+IN3+ADDON)
+        #print(JN3)
         #print(JN1+" "+" "+JN2)
         op1 = "*"
         op2 = "+"
@@ -85,7 +90,20 @@ def Main():
             Convert(V[0],V[1],V[2])
     elif I == "M":
         print("Calculate Mass")
+        print("Ie CM> Elem1 Elem2 Num1 Num2/ Elem1 Elem2 Elem3 Num1 Num2 Num3")
         M = input("CM> ")
         V = M.split()
+        print(len(V))
+        if len(V) == 4:
+            #print(V[0],V[1],V[2],V[3])
+            GM(V[0],V[1],F,int(V[2]),int(V[3]),F)
+        elif len(V) == 6:
+            GM(V[0], V[1], V[2], int(V[3]), int(V[4]), int(V[5]))
+        
         
 Main()
+
+# 1 2 3
+# 4 5 6
+# 7 8 9
+#   0
