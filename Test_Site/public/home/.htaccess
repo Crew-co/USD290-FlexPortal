@@ -1,15 +1,3 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-<Files index.html>
-AuthName "Login"
-AuthType Basic
-AuthUserFile /workspace/USD290-FlexPortal/Test_Site/.htpasswds/.htpasswd
-Require valid-user
-</Files>
-
-AuthName "Login"
-AuthType Basic
-AuthUserFile /workspace/USD290-FlexPortal/Test_Site/.htpasswds/.htpasswd
-Require valid-user

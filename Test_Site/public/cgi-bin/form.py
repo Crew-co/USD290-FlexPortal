@@ -15,9 +15,7 @@ def GETSTUDENT(stu):
     try:
         # student = input("User: ")
         student = stu
-        res = rq.get(
-            "https://flex.usd290.org/cyclonehour/admajax.php?search=" + student,verify=False,
-        )
+        res = rq.get("https://flex.usd290.org/cyclonehour/admajax.php?search=" + student,verify=False)
         NL = re.split("=|'>|</a>|<a href|Suggestions</div>\n<div class|</div>\n<div class|<div class|'suggest_link|'suggestions'|</div>\nError, invalid action|'adminStuProf.|php|uid|\?|style|'color: #08c;|No suggestions|''",res.text)
         NL_EMPTY_STRINGS = []
         for string in NL:
