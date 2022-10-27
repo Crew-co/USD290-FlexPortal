@@ -20,11 +20,13 @@ def Convert(IN1,IN2,IN3):
         SUM = float(IN2)*float(IN3)
         print(SUM)
     elif IN1 == "MSTM":
-        SUM = IN2 / IN3
+        SUM = float(IN2) / float(IN3)
         print(SUM)
     elif IN1 == "MTP":
-        SUM = IN2 * IN3
+        SUM = float(IN2) * float(IN3)
         print(SUM)
+    elif IN1 == "PTM2":
+        SUM = eval(IN2) / AVG
 
 def GM(IN1,IN2,IN3,IN4,IN5,IN6):
     ADDON = ".mass"
@@ -98,9 +100,7 @@ def Main():
             #print(V[0],V[1],V[2],V[3])
             GM(V[0],V[1],F,int(V[2]),int(V[3]),F)
         elif len(V) == 6:
-            GM(V[0], V[1], V[2], int(V[3]), int(V[4]), int(V[5]))
-        
-        
+            GM(V[0], V[1], V[2], int(V[3]), int(V[4]), int(V[5]))   
 Main()
 
 # 1 2 3
