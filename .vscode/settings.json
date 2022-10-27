@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "Coding_Tutorial for a friend"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
