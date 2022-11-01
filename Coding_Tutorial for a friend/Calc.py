@@ -23,10 +23,11 @@ def Convert(IN1,IN2,IN3):
         SUM = float(IN2) / float(IN3)
         print(SUM)
     elif IN1 == "MTP":
-        SUM = float(IN2) * float(IN3)
+        SUM = float(IN2) * AVG
         print(SUM)
     elif IN1 == "PTM2":
         SUM = eval(IN2) / AVG
+        print(SUM)
 
 def GM(IN1,IN2,IN3,IN4,IN5,IN6):
     ADDON = ".mass"
@@ -101,7 +102,58 @@ def Main():
             GM(V[0],V[1],F,int(V[2]),int(V[3]),F)
         elif len(V) == 6:
             GM(V[0], V[1], V[2], int(V[3]), int(V[4]), int(V[5]))   
-Main()
+#Main()
+
+def AllC():
+    F = None
+    print("Ie CM> Elem1 Elem2 Num1 Num2/ Elem1 Elem2 Elem3 Num1 Num2 Num3")
+    M = input("CM> ")
+    V = M.split()
+    if len(V) == 4:
+        A = GM(V[0],V[1],F,int(V[2]),int(V[3]),F)
+        return A
+    elif len(V) == 6:
+        B = GM(V[0], V[1], V[2], int(V[3]), int(V[4]), int(V[5]))
+        return B
+    elif len(V) == 2:
+        C = GM(V[0], F, F, int(V[1]),F,F)
+        return C
+
+def All(IN2,IN3):
+    ELM = AllC()
+    print("What conversion are u wanting to do?")
+    print("PTM,MTP,MTM,MSTM,MTP")
+    print("Ie PTM num1, num2")
+    LST = ["PTM","MTM","MSTM","MTP"]
+    EV = input("PTM2: ")
+    if EV == "":
+        for IN in LST:
+            A = Convert(IN, IN2, IN3)
+            print(IN + " " +A)
+    else:
+        LST.append(EV)
+        for IN in LST:
+            B = Convert(IN, IN2, IN3)
+            print(B)
+    return A
+
+def M2():
+    A = input("Num1: ")
+    B = input("Num2: ")
+    All(A,B)
+
+#M2()
+
+
+
+
+
+
+
+
+
+
+
 
 # 1 2 3
 # 4 5 6
