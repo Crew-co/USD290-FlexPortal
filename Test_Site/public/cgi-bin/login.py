@@ -9,5 +9,12 @@ form = cgi.FieldStorage()
 usr = form.getvalue("uname")
 psw = form.getvalue("psw")
 
-print(usr)
-print(psw)
+if usr == "Admin":
+    if psw == "password":
+        print("<script>window.location.href = '/';</script>")
+    else:
+        print(f"<script>alert('Wrong username or password {psw}')</script>")
+        print("<script>window.location.href='/admin';</script>")
+else:
+    print("<script>alert('Wrong Username')</script>")
+    print("<script>window.location.href='/admin';</script>")
