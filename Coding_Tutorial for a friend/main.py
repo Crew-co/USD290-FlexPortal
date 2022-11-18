@@ -1,13 +1,12 @@
-#!/usr/bin/python3
-import os
-os.system("clear")
+#!bin/python3
+from cryptography.fernet import Fernet
+import json
 
-while True:
-    try:
-        NAMES = ["Xavier","Daphne","Loki","Luci"]
-        INP = input("Name: ")
-        #YOUR CODE HERE
-        
+# Opening Json file
+f = open('Encrypted.json')
+LJ = json.load(f)
+f.close()
 
-    except ValueError as e:
-        print("Your name is not in the list")
+k = open('fk.key')
+R = k.readlines()
+k.close()
