@@ -2,7 +2,6 @@
 
 import cgi, cgitb
 import requests as rq
-import os
 import warnings as w
 import json
 import re
